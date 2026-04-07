@@ -1,14 +1,222 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="utf-8">
-        <title>HTML勉強用サイト</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <p class="red">Hello, HTML!</p>
-        <footer>
-	        <p class="blue">© 2024 Your Name.</p>
-				</footer>
-    </body>
-</html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Site - Perfect Layout</title>
+    <style>
+    
+    body {
+        font-family: "Helvetica Neue", Arial, sans-serif;
+        margin: 0;
+        padding: 40px 20px;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1000px;
+    }
+
+    .site-header {
+        margin-bottom: 40px;
+        font-weight: bold;
+    }
+
+    .hero {
+        margin-bottom: 60px;
+    }
+
+    .title-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 10px;
+    }
+
+    .dev-icon {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+    }
+
+    h1 {
+        font-size: 40px;
+        margin: 0;
+        font-weight: 900;
+        letter-spacing: -0.03em; 
+    }
+
+    .description {
+        color: #888;
+        margin: 0;
+        font-size: 15px;
+    }
+
+   
+    .card-grid {
+        display: flex;
+        flex-wrap: wrap; 
+        gap: 50px 30px; 
+        margin-bottom: 100px;
+    }
+
+    .card {
+        flex: 0 0 calc(50% - 15px);
+        max-width: calc(50% - 15px);
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+    .card img {
+        width: 100%;
+        height: auto;
+        
+        aspect-ratio: 16 / 10; 
+        object-fit: cover; 
+        display: block;
+        border-radius: 2px; 
+    }
+
+    
+    .card:nth-child(1) img {
+        object-position: 50% 30%; 
+    }
+
+    
+    .card:nth-child(2) img {
+        object-position: 50% 10%; 
+    }
+
+    
+    .card:nth-child(3) img {
+        object-position: 70% 30%; 
+    }
+
+    
+    .card:nth-child(4) img {
+        object-position: 50% 50%; 
+    }
+
+    .card-content {
+        margin-top: 15px;
+    }
+
+    
+    .ribbon-tag {
+        display: inline-block;
+        background-color: #f88a8a; 
+        color: white;
+        padding: 5px 25px;
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 8px;
+        /* 矢印の形に切り抜く */
+        clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%, 5% 50%);
+    }
+
+    .card-content p {
+        color: #999;
+        font-size: 14px;
+        margin: 0;
+        line-height: 1.5;
+    }
+
+    
+    .site-footer {
+        border-top: 1px solid #eee;
+        padding-top: 40px;
+    }
+
+    .sns-icons {
+        display: flex;
+        gap: 20px;
+        margin: 20px 0 60px 0;
+    }
+
+    .sns-icons img {
+        width: 25px;
+        height: 25px;
+        filter: brightness(0); 
+    }
+
+    .copyright {
+        text-align: center;
+        font-size: 14px;
+        color: #333;
+    }
+
+   
+    @media (max-width: 768px) {
+        .card {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        h1 {
+            font-size: 32px;
+        }
+    }
+</style>
+</head>
+<body>
+
+    <div class="container">
+        <header class="site-header">Site name</header>
+
+        <section class="hero">
+            <div class="title-wrapper">
+                <img src="images/ic_baseline-logo-dev.png" class="dev-icon">
+                <h1>うちのニャンコ</h1>
+            </div>
+            <p class="description">元々は野良猫だった子を保護して飼いました</p>
+        </section>
+
+        <main class="card-grid">
+            <div class="card">
+                <img src="images/IMG_3858.JPG">
+                <div class="card-content">
+                    <div class="ribbon-tag">茶しろさん</div>
+                    <p>三歳くらいの男の子でご飯大好きです。チュールにハマっています。</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/IMG_3859.JPG">
+                <div class="card-content">
+                    <div class="ribbon-tag">コビちゃん</div>
+                    <p>最近子猫を卒業しました。いちばん気ままです。噛み癖あり</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/IMG_3860.JPG">
+                <div class="card-content">
+                    <div class="ribbon-tag">ビーちゃん</div>
+                    <p>三歳程度の男の子で茶しろさんとは仲が悪いです。一番ビックな８キロ級です</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="images/IMG_3861.JPG">
+                <div class="card-content">
+                    <div class="ribbon-tag">はなちゃん</div>
+                    <p>三万分の1の確率で生まれてくる茶とらの女の子です。よく外から蛇を持って来てくれます</p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div style="font-weight: bold;">Site name</div>
+            <div class="sns-icons">
+                <img src="images/carbon_logo-x.png">
+                <img src="images/mdi_youtube.png">
+                <img src="images/ic_baseline-facebook.png">
+            </div>
+            <div class="copyright">© 2026 <名前></div>
+        </footer>
+    </div>
+
+</body>
